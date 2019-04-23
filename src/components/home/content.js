@@ -1,6 +1,7 @@
 //import
 import React from 'react'
-import { render } from "react-dom"
+import { render } from 'react-dom'
+import { connect } from 'react-redux'
 
 class Home extends React.Component {
 
@@ -14,4 +15,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default connect(null, null, null)(Home);

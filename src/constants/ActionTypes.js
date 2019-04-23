@@ -1,0 +1,1 @@
+export const LOADING_CHANGE = 'LOADING_CHANGE';
