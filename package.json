@@ -1,9 +1,12 @@
 {
-  "name": "react",
+  "name": "react-redux",
   "version": "1.0.0",
   "description": "boilerplate-react-redux",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --mode=development && npm run dev",
+    "dev": "webpack-dev-server",
+    "production": "webpack -p --mode=production --config webpack.prod.babel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +23,26 @@
   "bugs": {
     "url": "https://github.com/slam24/react-bolierplate/issues"
   },
-  "homepage": "https://github.com/slam24/react-bolierplate#readme"
+  "homepage": "https://github.com/slam24/react-bolierplate#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "browser-sync": "^2.26.4",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "html-webpack-plugin": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.1",
+    "webpack-livereload-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.1"
+  }
 }
