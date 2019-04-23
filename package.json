@@ -1,5 +1,5 @@
 {
-  "name": "react-redux",
+  "name": "react-bolierplate",
   "version": "1.0.0",
   "description": "boilerplate-react-redux",
   "main": "index.js",
@@ -26,7 +26,10 @@
   "homepage": "https://github.com/slam24/react-bolierplate#readme",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -43,6 +46,7 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.1",
     "webpack-livereload-plugin": "^2.2.0",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack-dev-server": "^3.3.1"
   }
 }
