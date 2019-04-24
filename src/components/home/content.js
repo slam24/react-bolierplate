@@ -4,7 +4,8 @@ import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import DataActions from '../../actions/data'
+import dataActions from '../../actions/data'
+import httpActions from '../../actions/http'
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,11 +23,22 @@ class Home extends React.Component {
     this.props.changeLoading();
   }
 
-  render() {
+  connectAPI(){
+    this.props.getRequest("", "", "").then(
+      (response) => {
+        console.log(response)
+      },
+      (err) => {
+        console.log(err)
+      }
+    );
+  }
 
+  render() {
     return (
       <div>
-        <button type="button" onClick={this.connectAction.bind(this)}>Conectar action</button> 
+        <button type="button" onClick={this.connectAction.bind(this)}>Conectar action</button>
+        <button type="button" onClick={this.connectAPI.bind(this)}>Conectar API</button>
       </div>
     );
   }
@@ -34,7 +46,8 @@ class Home extends React.Component {
 
 Home.propTypes = {
   loading: PropTypes.func.isRequired,
-  getData: PropTypes.object.isRequired
+  getData: PropTypes.object.isRequired,
+  getRequest: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => {
@@ -45,8 +58,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    loading: () => dispatch(DataActions.loading()),
-    changeLoading: () => dispatch(DataActions.changeLoading()),
+    loading: () => dispatch(dataActions.loading()),
+    changeLoading: () => dispatch(dataActions.changeLoading()),
+    getRequest: (row, controller, token) => dispatch(httpActions.getRequest(row, controller, token))
   }
 };
 
