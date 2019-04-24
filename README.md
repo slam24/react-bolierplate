@@ -30,6 +30,6 @@ $ npm install or yarn install
 # serve with hot reload at localhost:3000.
 $ npm start
 
-# Production release
+# production release
 $ npm run production
 ```
