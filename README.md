@@ -4,7 +4,7 @@ Boilerplate of react with redux and http requests.
 
 ![](https://img.shields.io/badge/React-16.8.6-red.svg)
 ![](https://img.shields.io/badge/Redux-4.0.1-blue.svg)
-![](https://img.shields.io/badge/React-redux-7.0.2-green.svg)
+![](https://img.shields.io/badge/React_redux-7.0.2-green.svg)
 
 ## Table of Contents
 
