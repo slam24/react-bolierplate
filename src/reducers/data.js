@@ -1,7 +1,8 @@
 import * as ActionTypes from '../constants/ActionTypes'
 
 const initialState = {
-    loading: false
+    loading: false,
+    data: "old"
 };
 
 export default (state = initialState, action = {}) => {
@@ -10,6 +11,11 @@ export default (state = initialState, action = {}) => {
     return {
       ...state,
       loading: !state.loading
+    }
+  case ActionTypes.CHANGE_DATA:
+    return {
+      ...state,
+      data: action.data
     }
   default: return state;
   }

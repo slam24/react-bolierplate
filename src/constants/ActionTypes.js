@@ -1,1 +1,2 @@
 export const LOADING_CHANGE = 'LOADING_CHANGE';
+export const CHANGE_DATA = 'CHANGE_DATA';

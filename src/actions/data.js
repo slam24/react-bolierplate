@@ -6,13 +6,22 @@ const loading = () => {
   }
 }
 
-const changeLoading = () => {
+const change = (data) => {
+  return {
+    type: ActionTypes.CHANGE_DATA,
+    data
+  }
+}
+
+const changeLoading = (data) => {
   return (dispatch) => {
     dispatch(loading());
+    dispatch(change(data));
   }
 }
 
 export default {
   loading,
-  changeLoading
+  changeLoading,
+  change
 }

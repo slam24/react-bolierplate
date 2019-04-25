@@ -20,7 +20,7 @@ class Home extends React.Component {
 
   connectAction(){
     this.props.getData.newVar = 'newData';
-    this.props.changeLoading();
+    this.props.changeLoading("new");
   }
 
   connectAPI(){
@@ -59,7 +59,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     loading: () => dispatch(dataActions.loading()),
-    changeLoading: () => dispatch(dataActions.changeLoading()),
+    changeLoading: (data) => dispatch(dataActions.changeLoading(data)),
     getRequest: (row, controller, token) => dispatch(httpActions.getRequest(row, controller, token))
   }
 };
