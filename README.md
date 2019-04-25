@@ -10,6 +10,7 @@ Boilerplate of react with redux and http requests.
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Sandbox](#sandbox)
 
 ## Installation
 
@@ -33,3 +34,7 @@ $ npm start
 # production release
 $ npm run production
 ```
+
+## Sandbox
+
+* [codesandbox.io](https://codesandbox.io/s/9j63000m5y)
