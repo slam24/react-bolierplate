@@ -7,9 +7,11 @@ import PropTypes from 'prop-types'
 import dataActions from '../../actions/data'
 import httpActions from '../../actions/http'
 
+import ModalForm from './form'
+
 class Home extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {}
   }
@@ -37,8 +39,11 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <button type="button" onClick={this.connectAction.bind(this)}>Conectar action</button>
-        <button type="button" onClick={this.connectAPI.bind(this)}>Conectar API</button>
+        <ModalForm ref={ref => this.chartsComponent = ref }/>
+        <button className="btn btn-success" onClick={this.connectAction.bind(this)}>Conectar action</button>
+        <button className="btn btn-info" onClick={this.connectAPI.bind(this)}>Conectar API</button>
+        <button className="btn btn-warning" onClick={(e) => this.chartsComponent.handleShow()}>Open modal with empty form</button>
+        <button className="btn btn-warning" onClick={(e) => this.chartsComponent.handleShow({"name":"karl", "phone": "8888888"})}>Open modal with filled form</button>
       </div>
     );
   }
