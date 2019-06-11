@@ -7,7 +7,8 @@ const returnData = new Promise((resolve, reject) => {
 
 const getRequest = (data, controller, token) => {
   return dispatch => {
-    return axios.get(`${API}${controller}`, {params: data, headers: { Authorization: token }});
+    //return axios.get(`${API}${controller}`, {params: data, headers: { Authorization: token }});
+    return returnData;
   }
 }
 
