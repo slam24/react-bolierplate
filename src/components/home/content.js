@@ -26,7 +26,7 @@ class Home extends React.Component {
   }
 
   connectAPI(){
-    this.props.getRequest("", "", "").then(
+    this.props.getRequest({ 'typeOption': 'allUsers' }, "auth", "").then(
       (response) => {
         console.log(response)
       },
